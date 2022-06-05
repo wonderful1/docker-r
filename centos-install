@@ -1,0 +1,12 @@
+yum install -y epel-release
+yum install -y R
+yum install -y libxml2-devel
+yum install -y libcurl-devel
+yum install -y openssl
+yum install -y libjpeg-devel
+#if (!requireNamespace("BiocManager", quietly = TRUE))
+#+     install.packages("BiocManager")
+R -e "install.packages('https://cran.r-project.org/src/contrib/Archive/locfit/locfit_1.5-9.2.tar.gz',repos = NULL)"
+/usr/bin/R  -e "BiocManager::install('DESeq2')"
+/usr/bin/R  -e "install.packages('ggplot2')"
+/usr/bin/R -e "BiocManager::install('edgeR')"
