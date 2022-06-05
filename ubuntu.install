@@ -1,0 +1,6 @@
+apt-get update
+apt-get install -y r-base
+apt-get update && apt-get install -y libxml2-dev &&  apt install -y libcurl4-openssl-dev
+#apt install build-essential libcurl4-gnutls-dev libxml2-dev libssl-dev
+apt-get install r-cran-httr
+/usr/bin/R -e "install.packages('BiocManager')" && R -e "install.packages('https://cran.r-project.org/src/contrib/Archive/locfit/locfit_1.5-9.2.tar.gz',repos = NULL)" && /usr/bin/R  -e "BiocManager::install('DESeq2')" && /usr/bin/R  -e "install.packages('ggplot2')" && /usr/bin/R -e "BiocManager::install('edgeR')"
