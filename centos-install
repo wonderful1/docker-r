@@ -4,6 +4,7 @@ yum install -y libxml2-devel
 yum install -y libcurl-devel
 yum install -y openssl
 yum install -y libjpeg-devel
+#yum install -y libxml2 libxml2-devel libxslt libxslt-devel
 #if (!requireNamespace("BiocManager", quietly = TRUE))
 #+     install.packages("BiocManager")
 R -e "install.packages('https://cran.r-project.org/src/contrib/Archive/locfit/locfit_1.5-9.2.tar.gz',repos = NULL)"
