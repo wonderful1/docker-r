@@ -1,0 +1,16 @@
+1. ERROR: configuration failed for package ‘openssl’
+
+安装openssl
+yum install openssl-devel
+
+遇见报错
+Error: package or namespace load failed for ‘openssl’ in dyn.load(file, DLLpath = DLLpath, ...):
+ unable to load shared object '/usr/lib64/R/library/00LOCK-openssl/00new/openssl/libs/openssl.so':
+  libssl.so.1.1: cannot open shared object file: No such file or directory
+
+解决办法：
+find / -name libssl.so.1.1
+find / -name libcrypto.so.1.1
+ln -s /usr/local/lib64/libssl.so.1.1  /usr/lib64/libssl.so.1.1
+ln -s /usr/local/lib64/libcrypto.so.1.1  /usr/lib64/libcrypto.so.1.1
+
